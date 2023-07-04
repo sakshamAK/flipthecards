@@ -108,14 +108,14 @@ export const Landing = () => {
                             <div className={style.cardContainer} key={idx}>
                                 <img
                                     className={style.cardImg}
-                                    style={toggleClass.find(i => i === idx) ? { ...flipImg, transform: "rotateY(0deg)" } : tempState.find(i => i === item.id) ? { ...flipImg, transform: "rotateY(0deg)" } : { ...flipImg, showImg }}
+                                    style={idx === toggleClass.find(i => i === idx) ? { ...flipImg, transform: "rotateY(0deg)" } : tempState.find(i => i === item.id) ? { ...flipImg, transform: "rotateY(0deg)" } : { ...flipImg, showImg }}
                                     src={new URL(`../../assets/${item.imgSrc}`, import.meta.url).href}
                                     alt={item.imgSrc}
                                 />
                                 <div
                                     onClick={() => checkCard(idx, item.id)}
                                     className={style.hideContent}
-                                    style={toggleClass.find(i => i === idx) ? { ...hideContent, transform: "rotateY(180deg)" } : tempState.find(i => i === item.id) ? { ...hideContent, transform: "rotateY(180deg)" } : hideContent}
+                                    style={idx === toggleClass.find(i => i === idx) ? { ...hideContent, transform: "rotateY(180deg)" } : tempState.find(i => i === item.id) ? { ...hideContent, transform: "rotateY(180deg)" } : hideContent}
                                 ></div>
                             </div>
                         ))}
