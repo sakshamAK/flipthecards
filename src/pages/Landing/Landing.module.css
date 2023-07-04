@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+.landing-container {
+    height: 80vh;
+    width: 80vw;
+    background: #fefefe;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem;
+    box-sizing: border-box;
+    font-family: 'Indie Flower', cursive;
+    flex-direction: column;
+    position: relative;
+}
+
+.landing-container h1 {
+    justify-self: flex-start;
+    font-size: 2.5rem;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, 10rem);
+    grid-template-rows: repeat(3, 10rem);
+    grid-auto-rows: 10rem;
+    grid-auto-columns: 10rem;
+}
+
+.cardImg {
+    height: 50%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.hideContent {
+    background: url("https://picsum.photos/100/100");
+    background-size: 100% auto;
+    height: 90%;
+    position: absolute;
+    width: 90%;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.cardContainer {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative; 
+}
+
+.gameHeader {
+    display: flex;
+    align-items: center;
+}

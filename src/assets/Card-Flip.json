@@ -1,0 +1,60 @@
+{
+  "Card-Flip": [
+    {
+      "imageSet": [
+        {
+          "imgSrc": "cow.png",
+          "id": 1
+        },
+        {
+          "imgSrc": "rabbit.png",
+          "id": 2
+        },
+        {
+          "imgSrc": "Dog.png",
+          "id": 3
+        },
+        {
+          "imgSrc": "cat.png",
+          "id": 4
+        },
+        {
+          "imgSrc": "camel.png",
+          "id": 5
+        },
+        {
+          "imgSrc": "pen.jpeg",
+          "id": 6
+        }
+      ]
+    },
+    {
+      "imageSet": [
+        {
+          "imgSrc": "pen.jpeg",
+          "id": 1
+        },
+        {
+          "imgSrc": "pencil.jpeg",
+          "id": 2
+        },
+        {
+          "imgSrc": "book.jpeg",
+          "id": 3
+        },
+        {
+          "imgSrc": "eraser.png",
+          "id": 4
+        },
+        {
+          "imgSrc": "sharpner.jpeg",
+          "id": 5
+        },
+        {
+          "imgSrc": "notebook.jpeg",
+          "id": 6
+        }
+      ]
+    }
+  ]
+}
