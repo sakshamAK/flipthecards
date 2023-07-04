@@ -1,4 +1,4 @@
-import style from "./Landing.module.css"
+import style from "./GameBoard.module.css"
 import data from "../../assets/Card-Flip.json"
 import { useEffect, useState } from "react"
 
@@ -10,7 +10,7 @@ export const Landing = () => {
     const [hideContent, setHideContent] = useState({});
     const [showImg, setShowImg] = useState({});
     const [tempState, setTempState] = useState([]);
-    const [timer, setTimer] = useState(60);
+    const [timer, setTimer] = useState(100);
     const [clickedImg, setClickedImg] = useState({ item: "", id: "" });
     const [heading, setHeading] = useState("Remember the cards");
     const [score, setScore] = useState(0);
@@ -75,9 +75,6 @@ export const Landing = () => {
                 setHideContent({});
                 setHeading("Remember the cards")
             }
-            else {
-                setHeading("Congratulations on completing the game!!")
-            }
         }
     }, [tempState, i])
 
@@ -102,7 +99,10 @@ export const Landing = () => {
         <div className={style["landing-container"]}>
             {timer === 0 || tempState.length === data["Card-Flip"][i].imageSet.length ? <h1>Your score is {score}</h1> :
                 <>
-                    <div className={style.gameHeader}><h1 className={style["remember-the-cards"]}>{heading}</h1><h2 style={{ position: "absolute", right: "6rem", color: "blue" }}>{timer}</h2></div>
+                    <div className={style.gameHeader}>
+                        <h1 className={style["remember-the-cards"]}>{heading}</h1>
+                        <h2 className={style.timer}>{timer}</h2>
+                    </div>
                     <div className={style["game-container"]} onClick={flipAllCards}>
                         {gridItems.map((item, idx) => (
                             <div className={style.cardContainer} key={idx}>

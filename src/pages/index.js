@@ -1,3 +1,3 @@
 // For barrel imports
 
-export { Landing } from "./Landing/Landing";
+export { Landing } from "./GameBoard/GameBoard";

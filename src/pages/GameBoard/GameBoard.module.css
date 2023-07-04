@@ -6,7 +6,7 @@
     background: #fefefe;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     padding: 1rem;
     box-sizing: border-box;
     font-family: 'Indie Flower', cursive;
@@ -16,13 +16,12 @@
 
 .landing-container h1 {
     justify-self: flex-start;
-    font-size: 2.5rem;
 }
 
 .game-container {
     display: grid;
-    grid-template-columns: repeat(4, 10rem);
-    grid-template-rows: repeat(3, 10rem);
+    grid-template-columns: repeat(4, clamp(5rem, 13vw, 10rem));
+    grid-template-rows: repeat(3, clamp(5rem, 13vw, 10rem));
     grid-auto-rows: 10rem;
     grid-auto-columns: 10rem;
 }
@@ -50,10 +49,32 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    position: relative; 
+    position: relative;
 }
 
-.gameHeader {
+.gameHeader,
+.remember-the-cards {
     display: flex;
     align-items: center;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.timer {
+    position: absolute;
+    right: 6rem;
+    color: blue;
+}
+
+@media screen and (max-width: 655px) {
+    .gameHeader {
+        flex-direction: column;
+    }
+
+    .timer {
+        position: absolute;
+        right: 50%;
+        top: 0;
+        transform: translateX(50%);
+        color: blue;
+    }
 }
